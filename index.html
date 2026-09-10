@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Döviz ve Finans Takip</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <div id="header">
+        <h2>Canlı Piyasalar</h2>
+        <p>Güncel Döviz, Altın ve Kripto Verileri</p>
+        <span id="update-time"><i class="fa-regular fa-clock"></i> Yükleniyor...</span>
+    </div>
+
+    <div id="container">
+
+        <!-- DÖVİZLER -->
+        <div class="card" id="card-USD">
+            <div class="card-header">
+                <div>
+                    <h3>USD</h3>
+                    <p>ABD Doları</p>
+                </div>
+                <span class="badge" id="USD-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="USD-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="USD-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="card-EUR">
+            <div class="card-header">
+                <div>
+                    <h3>EUR</h3>
+                    <p>Euro</p>
+                </div>
+                <span class="badge" id="EUR-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="EUR-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="EUR-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="card-GBP">
+            <div class="card-header">
+                <div>
+                    <h3>GBP</h3>
+                    <p>İngiliz Sterlini</p>
+                </div>
+                <span class="badge" id="GBP-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="GBP-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="GBP-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="card-CHF">
+            <div class="card-header">
+                <div>
+                    <h3>CHF</h3>
+                    <p>İsviçre Frangı</p>
+                </div>
+                <span class="badge" id="CHF-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="CHF-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="CHF-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- ALTIN ÇEŞİTLERİ -->
+        
+
+    </div>
+
+    <div id="nav">
+    <ul>
+        <li>
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i>
+                <span>Anasayfa</span>
+            </a>
+        </li>
+        <li>
+                <a href="index.html">
+                    <i class="fa-solid fa-wallet"></i>
+                    <span>Döviz</span>
+                </a>
+            </li>
+            <li>
+                <a  href="altin.html">
+                    <i class="fa-solid fa-coins"></i>
+                    <span>Altın</span>
+                </a>
+            </li>
+            <li>
+                <a href="donusturucu.html">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Çevirici</span>
+                </a>
+            </li>
+            <li>
+                <a href="ayarlar.html">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Ayarlar</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>

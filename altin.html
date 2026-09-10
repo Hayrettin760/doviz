@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altın Fiyatları</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <h2>Canlı Altın Fiyatları</h2>
+        <p>Anlık altın ve sarrafiye piyasası verileri</p>
+        <span id="update-time"><i class="fa-regular fa-clock"></i> Yükleniyor...</span>
+    </div>
+
+    <div id="container">
+
+        <!-- GRAM ALTIN -->
+        <div class="card" id="card-GRA">
+            <div class="card-header">
+                <div>
+                    <h3>GRAM ALTIN</h3>
+                    <p>24 Ayar Altın</p>
+                </div>
+                <span class="badge" id="GRA-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="GRA-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="GRA-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- ÇEYREK ALTIN -->
+        <div class="card" id="card-CEY">
+            <div class="card-header">
+                <div>
+                    <h3>ÇEYREK ALTIN</h3>
+                    <p>Sarrafiye</p>
+                </div>
+                <span class="badge" id="CEY-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="CEY-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="CEY-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- YARIM ALTIN -->
+        <div class="card" id="card-YAR">
+            <div class="card-header">
+                <div>
+                    <h3>YARIM ALTIN</h3>
+                    <p>Sarrafiye</p>
+                </div>
+                <span class="badge" id="YAR-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="YAR-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="YAR-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAM ALTIN -->
+        <div class="card" id="card-TAM">
+            <div class="card-header">
+                <div>
+                    <h3>TAM ALTIN</h3>
+                    <p>Ziynet Altın</p>
+                </div>
+                <span class="badge" id="TAM-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="TAM-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="TAM-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- ATA ALTIN -->
+        <div class="card" id="card-ATA">
+            <div class="card-header">
+                <div>
+                    <h3>ATA ALTIN</h3>
+                    <p>Ata Lira</p>
+                </div>
+                <span class="badge" id="ATA-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="ATA-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="ATA-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+        <!-- REŞAT ALTIN -->
+        <div class="card" id="card-RES">
+            <div class="card-header">
+                <div>
+                    <h3>REŞAT ALTIN</h3>
+                    <p>Sarrafiye</p>
+                </div>
+                <span class="badge" id="RES-change">%0.00</span>
+            </div>
+            <div class="card-body">
+                <div class="price-box">
+                    <span>Alış</span>
+                    <strong id="RES-buying">-</strong>
+                </div>
+                <div class="price-box">
+                    <span>Satış</span>
+                    <strong id="RES-selling">-</strong>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Ortak Navigasyon Menüsü -->
+    <div id="nav">
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i><span>Anasayfa</span></a></li>
+            <li><a href="doviz.html"><i class="fa-solid fa-wallet"></i><span>Döviz</span></a></li>
+            <li><a href="altin.html" class="active"><i class="fa-solid fa-coins"></i><span>Altın</span></a></li>
+            <li><a href="donusturucu.html"><i class="fa-solid fa-calculator"></i><span>Çevirici</span></a></li>
+            <li><a href="ayarlar.html"><i class="fa-solid fa-gear"></i><span>Ayarlar</span></a></li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

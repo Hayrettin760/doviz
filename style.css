@@ -1,0 +1,362 @@
+/* ==========================================
+   1. GENEL SIFIRLAMA VE TEMEL STİLLER
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #0f172a;
+    padding-bottom: 90px; /* Alt navigasyon menüsünün içeriği kapatmaması için */
+    min-height: 100vh;
+}
+
+/* ==========================================
+   2. HEADER (ÜST BİLGİ ALANI)
+   ========================================== */
+#header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+#header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+#header p {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+#update-time {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 12px;
+    color: #cbd5e1;
+}
+
+/* ==========================================
+   3. ANA KAPSAYICI (GRID DÜZENİ)
+   ========================================== */
+#container {
+    max-width: 900px;
+    margin: 0 auto 30px auto;
+    padding: 0 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 16px;
+}
+
+/* ==========================================
+   4. KART TASARIMLARI (DÖVİZ & ALTIN)
+   ========================================== */
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 10px;
+    margin-bottom: 12px;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    color: #0f172a;
+    font-weight: 700;
+}
+
+.card-header p {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Yüzde Değişim Rozetleri */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 8px;
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.badge.up {
+    background-color: #dcfce7;
+    color: #15803d;
+}
+
+.badge.down {
+    background-color: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Fiyat Kutuları */
+.card-body {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.price-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.price-box span {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.price-box strong {
+    font-size: 1.1rem;
+    color: #0f172a;
+    margin-top: 2px;
+}
+
+/* ==========================================
+   5. DÖVİZ ÇEVİRİCİ SAYFASI (donusturucu.html)
+   ========================================== */
+.converter-card {
+    grid-column: 1 / -1;
+}
+
+.converter-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-group label {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+.field-group input, 
+.field-group select {
+    padding: 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0f172a;
+    background-color: #f8fafc;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.field-group input:focus, 
+.field-group select:focus {
+    border-color: #2563eb;
+}
+
+.swap-btn {
+    align-self: center;
+    background-color: #e2e8f0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #334155;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.swap-btn:hover {
+    background-color: #cbd5e1;
+    transform: rotate(180deg);
+}
+
+.result-box {
+    margin-top: 8px;
+    padding: 16px;
+    background-color: #eff6ff;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #bfdbfe;
+}
+
+.result-box span {
+    font-size: 0.8rem;
+    color: #3b82f6;
+    font-weight: 600;
+}
+
+.result-box h2 {
+    color: #1d4ed8;
+    font-size: 1.8rem;
+    margin-top: 4px;
+}
+
+/* ==========================================
+   6. AYARLAR SAYFASI (ayarlar.html)
+   ========================================== */
+.settings-card {
+    grid-column: 1 / -1;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.setting-info i {
+    font-size: 1.2rem;
+    color: #2563eb;
+    width: 24px;
+    text-align: center;
+}
+
+.setting-info h4 {
+    font-size: 0.95rem;
+    color: #0f172a;
+}
+
+.setting-info p {
+    font-size: 0.75rem;
+    color: #64748b;
+}
+
+/* Toggle Switch Stili */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 44px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #cbd5e1;
+    transition: .3s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2563eb;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* ==========================================
+   7. ALT NAVİGASYON MENÜSÜ (#nav)
+   ========================================== */
+#nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.04);
+    z-index: 1000;
+}
+
+#nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 10px 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#nav li a {
+    text-decoration: none;
+    color: #64748b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+#nav li a i {
+    font-size: 1.25rem;
+    margin-bottom: 3px;
+}
+
+#nav li a:hover,
+#nav li a.active {
+    color: #2563eb;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayarlar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <h2>Ayarlar</h2>
+        <p>Uygulama tercihlerinizi yönetin</p>
+    </div>
+
+    <div id="container">
+        <div class="card settings-card">
+            
+            <div class="setting-item">
+                <div class="setting-info">
+                    <i class="fa-solid fa-moon"></i>
+                    <div>
+                        <h4>Karanlık Mod</h4>
+                        <p>Gece kullanımı için koyu tema</p>
+                    </div>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="dark-mode-toggle">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    <div>
+                        <h4>Otomatik Yenileme</h4>
+                        <p>Verileri her 30 saniyede güncelle</p>
+                    </div>
+                </div>
+                <label class="switch">
+                    <input type="checkbox" id="auto-refresh-toggle" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+
+            <div class="setting-item">
+                <div class="setting-info">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <div>
+                        <h4>Uygulama Sürümü</h4>
+                        <p>v1.0.0 (CodeFox)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Ortak Navigasyon -->
+    <div id="nav">
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i><span>Anasayfa</span></a></li>
+            <li><a href="doviz.html"><i class="fa-solid fa-wallet"></i><span>Döviz</span></a></li>
+            <li><a href="altin.html"><i class="fa-solid fa-coins"></i><span>Altın</span></a></li>
+            <li><a href="donusturucu.html"><i class="fa-solid fa-calculator"></i><span>Çevirici</span></a></li>
+            <li><a href="ayarlar.html" class="active"><i class="fa-solid fa-gear"></i><span>Ayarlar</span></a></li>
+        </ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

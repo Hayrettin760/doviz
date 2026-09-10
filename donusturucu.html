@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Döviz Dönüştürücü</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="header">
+        <h2>Döviz Çevirici</h2>
+        <p>Canlı kurlar üzerinden anlık hesaplama yapın</p>
+    </div>
+
+    <div id="container">
+        <div class="card converter-card">
+            <div class="converter-body">
+                
+                <div class="field-group">
+                    <label>Miktar</label>
+                    <input type="number" id="amount" value="100" placeholder="0.00" min="0">
+                </div>
+
+                <div class="field-group">
+                    <label>Çevrilen Birim</label>
+                    <select id="from-currency">
+                        <option value="USD">USD - ABD Doları</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - İngiliz Sterlini</option>
+                        <option value="CHF">CHF - İsviçre Frangı</option>
+                        <option value="TRY">TRY - Türk Lirası</option>
+                    </select>
+                </div>
+
+                <div class="swap-btn" id="swap-btn">
+                    <i class="fa-solid fa-arrow-down-up-across-line"></i>
+                </div>
+
+                <div class="field-group">
+                    <label>Hedef Birim</label>
+                    <select id="to-currency">
+                        <option value="TRY" selected>TRY - Türk Lirası</option>
+                        <option value="USD">USD - ABD Doları</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - İngiliz Sterlini</option>
+                        <option value="CHF">CHF - İsviçre Frangı</option>
+                    </select>
+                </div>
+
+                <div class="result-box">
+                    <span>Hesaplanan Tutar:</span>
+                    <h2 id="result-display">0.00 TRY</h2>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Ortak Navigasyon -->
+    <div id="nav">
+        <ul>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i><span>Anasayfa</span></a></li>
+            <li><a href="doviz.html"><i class="fa-solid fa-wallet"></i><span>Döviz</span></a></li>
+            <li><a href="altin.html"><i class="fa-solid fa-coins"></i><span>Altın</span></a></li>
+            <li><a href="donusturucu.html" class="active"><i class="fa-solid fa-calculator"></i><span>Çevirici</span></a></li>
+            <li><a href="ayarlar.html"><i class="fa-solid fa-gear"></i><span>Ayarlar</span></a></li>
+        </ul>
+    </div>
+
+    <script src="converter.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
